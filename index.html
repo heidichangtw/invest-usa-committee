@@ -84,8 +84,8 @@ li.has-dropdown.open .dropdown-menu, li.has-dropdown:hover .dropdown-menu { disp
 }
 .btn-outline-light { display: inline-block; background: transparent; color: var(--white); font-weight: 700; padding: 10px 22px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.45); }
 .btn-outline-light:hover { border-color: var(--white); text-decoration: none; }
-.brand-logo { height: 83px; width: auto; display: block; }
-.brand-logo-wrap { display: flex; align-items: center; }
+.brand-logo { height: 92px; width: auto; display: block; margin: -6px 0; }
+.brand-logo-wrap { display: flex; align-items: center; padding: 2px 0; }
 .page-banner { background: var(--navy); color: var(--white); padding: 40px 0; text-align: center; }
 .page-banner h1 { color: var(--white); margin-bottom: 6px; font-size: 2rem; }
 .page-banner p { color: #cdd9ec; margin: 0; }
@@ -167,7 +167,7 @@ li.has-dropdown.open .dropdown-menu, li.has-dropdown:hover .dropdown-menu { disp
 
 /* Tables */
 table.data-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
-table.data-table th { background: var(--navy); color: var(--white); text-align: left; padding: 10px 12px; }
+table.data-table th { background: var(--navy); color: var(--white); text-align: left; padding: 10px 12px; text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.82rem; }
 table.data-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
 table.data-table tr:nth-child(even) td { background: var(--light-blue); }
 .table-scroll { overflow-x: auto; }
@@ -231,7 +231,7 @@ footer.site-footer .copyright { border-top: 1px solid rgba(255,255,255,0.15); pa
   .category-grid { grid-template-columns: 1fr; }
   footer.site-footer .footer-grid { flex-direction: column; }
   .nav-wrap { padding: 10px 20px; }
-  .brand-logo { height: 50px; }
+  .brand-logo { height: 54px; margin: 0; }
   .hero h1 { font-size: 1.5rem; }
 }
 </style>
@@ -252,15 +252,16 @@ footer.site-footer .copyright { border-top: 1px solid rgba(255,255,255,0.15); pa
             <li data-page="members-join"><a href="#members-join">Become a Member</a></li>
           </ul>
         </li>
-        <li class="has-dropdown" data-page="invest-why invest-how invest-attract">
+        <li class="has-dropdown" data-page="invest-why invest-map invest-how">
           <a class="nav-link" href="#invest-why">Invest <span class="caret">▾</span></a>
           <ul class="dropdown-menu">
             <li data-page="invest-why"><a href="#invest-why">Why Invest in the U.S.</a></li>
+            <li data-page="invest-map"><a href="#invest-map">Taiwan FDI Map</a></li>
             <li data-page="invest-how"><a href="#invest-how">How to Invest in the U.S.</a></li>
-            <li data-page="invest-attract"><a href="#invest-attract">Attract Taiwanese Investment</a></li>
           </ul>
         </li>
-        <li data-page="events"><a class="nav-link" href="#events">Event</a></li>
+        <li data-page="attract"><a class="nav-link" href="#attract">Attract</a></li>
+        <li data-page="events"><a class="nav-link" href="#events">Events</a></li>
         <li data-page="resources"><a class="nav-link" href="#resources">Resources</a></li>
         <li data-page="contact"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
@@ -297,6 +298,30 @@ footer.site-footer .copyright { border-top: 1px solid rgba(255,255,255,0.15); pa
   </section>
 
   <section class="section-alt">
+    <div class="container">
+      <h2 class="section-title">How the Committee Helps Taiwan Companies Invest</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3>Practical Support at Every Stage</h3>
+          <ul>
+            <li>Connect you with vetted legal, tax, accounting, and site-selection professionals through our <a href="#members-directory">Member Directory</a></li>
+            <li>Introduce you to U.S. state Economic Development Organizations (EDOs) and government-affiliated partners</li>
+            <li>Provide practical guidance on structuring, financing, workforce, and compliance through our <a href="#invest-how">How to Invest</a> resource</li>
+            <li>Share data and trends on where Taiwan companies are investing via our <a href="#invest-map">Taiwan FDI Map</a></li>
+            <li>Coordinate participation in investment seminars, delegations, and networking events</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Where to Start</h3>
+          <p>Whether you're exploring the U.S. market for the first time or expanding an existing footprint, the Committee can help you find the right partners and information for your stage of investment.</p>
+          <p><a class="btn" href="#invest-how">See How to Invest in the U.S. →</a></p>
+          <p style="margin-top:14px;"><a href="#members-directory">Browse the Member Directory →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
     <div class="container">
       <h2 class="section-title">Taiwan FDI in the United States — At a Glance</h2>
       <div class="stat-row">
@@ -642,12 +667,83 @@ footer.site-footer .copyright { border-top: 1px solid rgba(255,255,255,0.15); pa
 
   <section>
     <div class="container">
+      <h2 class="section-title">The United States Is the World's Largest Market</h2>
+      <div class="tile-grid">
+        <div class="tile"><span class="icon">🌎</span>Largest single market — $29 trillion GDP and 330 million consumers</div>
+        <div class="tile"><span class="icon">💰</span>Deepest capital markets in the world — access to equity, debt, and venture funding</div>
+        <div class="tile"><span class="icon">🎓</span>Highly skilled, mobile workforce — output per hour over 30% above the OECD average</div>
+        <div class="tile"><span class="icon">💡</span>Global center for innovation — world-class universities and R&amp;D partnerships</div>
+        <div class="tile"><span class="icon">🏛️</span>Strong legal protections and IP enforcement environment</div>
+        <div class="tile"><span class="icon">🏭</span>Proximity to major advanced manufacturing clusters — Arizona, Texas, Ohio, and more</div>
+        <div class="tile"><span class="icon">🔗</span>Supply chain resilience and geopolitical diversification away from China</div>
+        <div class="tile"><span class="icon">🎁</span>CHIPS Act, IRA, and other federal &amp; state incentive programs offering billions in grants and tax credits</div>
+      </div>
+      <p style="margin-top:20px;">The U.S. hosts more inward FDI than any other country — <strong>$5.7 trillion</strong> in total FDI stock as of 2024 — and Asia-Pacific companies account for over 20% of that total. 2025 was a record year for Taiwan investment in the U.S., both by number of projects and total dollar value.</p>
+      <p><a class="btn" href="https://www.selectusa.gov" target="_blank" rel="noopener">Learn more at SelectUSA →</a></p>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <h2 class="section-title">Taiwan FDI in the U.S. — At a Glance</h2>
+      <div class="stat-row">
+        <div class="stat-box"><span class="num">$26.1B</span><div class="label">Taiwan FDI stock in U.S.</div><div class="source">Bureau of Economic Analysis</div></div>
+        <div class="stat-box"><span class="num">~$200B</span><div class="label">Announced Taiwan investments</div><div class="source">fDi Markets</div></div>
+        <div class="stat-box"><span class="num">$500B+</span><div class="label">Committed under the U.S.-Taiwan Agreement on Trade &amp; Investment</div><div class="source">Jan 2026</div></div>
+        <div class="stat-box"><span class="num">#1</span><div class="label">U.S. is Taiwan's top outbound investment destination</div><div class="source">2025</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h3>FDI Trends (2010–2025)</h3>
+      <div class="chart-placeholder">Bar or line chart: Taiwan outbound FDI to U.S. vs. China, 2010–2025.<br>Source: BEA, fDi Markets.</div>
+      <p>In 2010, over 83% of Taiwan's total outbound investment went to China. By 2025, China accounts for less than 1%. The United States is now Taiwan's #1 destination, with 2025 as the record year by both number of projects and total dollar value.</p>
+      <p style="font-size:0.85rem; color:var(--text-muted);">Source: Bureau of Economic Analysis (BEA); fDi Markets</p>
+
+      <h3 style="margin-top:32px;">Top Destination States</h3>
+      <div class="chart-placeholder">U.S. choropleth map: states shaded darker where Taiwan FDI is highest.</div>
+      <p>See the interactive breakdown of Taiwan FDI by state, sector, and project on the <a href="#invest-map">Taiwan FDI Map</a> page.</p>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <h2 class="section-title">The U.S.–Taiwan Agreement on Trade &amp; Investment</h2>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-top:-12px;">Source: U.S. Department of Commerce, January 2026</p>
+      <div class="two-col">
+        <div class="card">
+          <h3>Direct Investments — At Least $250 Billion</h3>
+          <p>Taiwanese semiconductor and technology enterprises will make new direct investments to build advanced semiconductor, energy, and AI production capacity in the United States.</p>
+        </div>
+        <div class="card">
+          <h3>Additional Investments — At Least $250 Billion in Credit Guarantees</h3>
+          <p>Taiwan will provide credit guarantees to facilitate additional investment by Taiwanese enterprises, supporting the full semiconductor supply chain in the U.S.</p>
+        </div>
+      </div>
+      <div class="card" style="margin-top:24px;">
+        <h3>Industrial Clusters</h3>
+        <p>The U.S. and Taiwan will establish world-class industrial parks, positioning the U.S. as the global center for next-generation technology and advanced manufacturing.</p>
+      </div>
+      <p style="margin-top:20px;"><a href="https://www.commerce.gov/news/fact-sheets/2026/01/fact-sheet-restoring-american-semiconductor-manufacturing-leadership" target="_blank" rel="noopener">Read the full Department of Commerce fact sheet →</a></p>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== INVEST — FDI MAP ===================== -->
+<div class="page" id="page-invest-map" data-title="Taiwan FDI Map">
+  <div class="page-banner"><div class="container"><h1>Invest</h1><p>Taiwan FDI across the United States</p></div></div>
+
+  <section>
+    <div class="container">
       <h3>Taiwan FDI Across the United States</h3>
       <p>Explore Taiwan investment by state, sector, and project — filter and click any marker for details.</p>
       <div class="map-embed">
         <iframe src="https://shelbyjayn.github.io/taiwan-fdi-map/" title="Taiwan FDI in the United States — Interactive Map" loading="lazy"></iframe>
       </div>
       <p style="font-size:0.85rem; color:var(--text-muted);">Source: fDi Markets (2003–2026); Taiwan Trade &amp; Investment booklet, TECRO/MOEA. In 2010, over 83% of Taiwan's total outbound investment went to China. By 2025, China accounts for less than 1%. The United States is now Taiwan's #1 destination. <a href="https://shelbyjayn.github.io/taiwan-fdi-map/" target="_blank" rel="noopener">Open full map in a new tab →</a></p>
+      <p><a href="#invest-why">← Back to Why Invest in the U.S.</a></p>
     </div>
   </section>
 </div>
@@ -711,19 +807,32 @@ footer.site-footer .copyright { border-top: 1px solid rgba(255,255,255,0.15); pa
   </section>
 </div>
 
-<!-- ===================== INVEST — ATTRACT TAIWANESE INVESTMENT ===================== -->
-<div class="page" id="page-invest-attract" data-title="Attract Taiwanese Investment">
-  <div class="page-banner"><div class="container"><h1>Invest</h1><p>For U.S. state economic development organizations (EDOs) seeking Taiwanese partners and investors</p></div></div>
+<!-- ===================== ATTRACT TAIWANESE INVESTMENT (top-level, for U.S. EDOs) ===================== -->
+<div class="page" id="page-attract" data-title="Attract Taiwanese Investment">
+  <div class="page-banner"><div class="container"><h1>Attract Taiwanese Investment</h1><p>For U.S. state economic development organizations (EDOs) seeking Taiwanese partners and investors</p></div></div>
 
   <section>
     <div class="container">
+      <h2 class="section-title">Why Taiwan Is a Strategic Investment Partner for the United States</h2>
       <div class="benefit-box">
-        <h3>Why Taiwan Is a Strategic Investment Partner for the United States</h3>
         <ul>
           <li>Taiwan and the United States have strengthened economic cooperation through the U.S.–Taiwan Agreement on Trade &amp; Investment, supporting closer commercial engagement and long-term investment collaboration.</li>
           <li>Taiwan is a global leader in advanced manufacturing, with internationally competitive strengths in semiconductors, AI supply chains, robotics, drones, HealthTech, and food manufacturing. Taiwan investment brings advanced manufacturing capabilities, technology expertise, and resilient supply chain partnerships that support innovation and high-quality job creation across the United States.</li>
+          <li>Taiwan is one of the fastest-growing sources of foreign direct investment in the U.S., with 2025 marking a record year by both number of projects and total dollar value.</li>
+          <li>Taiwan investment is diversifying rapidly away from China: in 2010, over 83% of Taiwan's outbound investment went to China; by 2025, China accounts for less than 1%, with the United States now Taiwan's #1 destination.</li>
         </ul>
       </div>
+
+      <h3 style="margin-top:8px;">Investment Amounts &amp; Trends</h3>
+      <div class="stat-row">
+        <div class="stat-box"><span class="num">$26.1B</span><div class="label">Taiwan FDI stock in U.S.</div><div class="source">Bureau of Economic Analysis</div></div>
+        <div class="stat-box"><span class="num">~$200B</span><div class="label">Announced Taiwan investments</div><div class="source">fDi Markets</div></div>
+        <div class="stat-box"><span class="num">$500B+</span><div class="label">Committed under the U.S.-Taiwan Agreement on Trade &amp; Investment</div><div class="source">Jan 2026</div></div>
+        <div class="stat-box"><span class="num">#1</span><div class="label">U.S. is Taiwan's top outbound investment destination</div><div class="source">2025</div></div>
+      </div>
+      <p style="margin-top:16px;">Under the U.S.–Taiwan Agreement on Trade &amp; Investment (U.S. Department of Commerce, January 2026): Taiwanese semiconductor and technology enterprises have committed to <strong>at least $250 billion</strong> in new direct investments to build advanced semiconductor, energy, and AI production capacity in the United States, backed by <strong>at least $250 billion</strong> in Taiwan-government credit guarantees to facilitate additional investment across the full semiconductor supply chain. The two countries will also establish world-class industrial parks, positioning the U.S. as the global center for next-generation technology and advanced manufacturing.</p>
+      <div class="chart-placeholder">Bar or line chart: Taiwan outbound FDI to U.S. vs. China, 2010–2025.<br>Source: BEA, fDi Markets.</div>
+      <p><a href="#invest-map">Explore Taiwan FDI by state, sector, and project on the interactive map →</a></p>
     </div>
   </section>
 
@@ -737,18 +846,19 @@ footer.site-footer .copyright { border-top: 1px solid rgba(255,255,255,0.15); pa
           <li>Participate in Committee programs and networking opportunities, when available.</li>
           <li>Engage with Taiwan companies through SelectUSA and other investment promotion initiatives.</li>
         </ul>
+        <p style="margin-top:16px;"><a class="btn" href="#members-join">Become a Member →</a></p>
       </div>
     </div>
   </section>
 </div>
 
 <!-- ===================== EVENT CALENDAR ===================== -->
-<div class="page" id="page-events" data-title="Event Calendar">
-  <div class="page-banner"><div class="container"><h1>Event Calendar</h1></div></div>
+<div class="page" id="page-events" data-title="Events Calendar">
+  <div class="page-banner"><div class="container"><h1>Events Calendar</h1></div></div>
 
   <section class="tight">
     <div class="container">
-      <h2 class="section-title">2026 Event Calendar</h2>
+      <h2 class="section-title">2026 Events Calendar</h2>
       <div class="table-scroll">
         <table class="data-table event-table">
           <colgroup>
@@ -759,14 +869,14 @@ footer.site-footer .copyright { border-top: 1px solid rgba(255,255,255,0.15); pa
           </colgroup>
           <thead><tr><th>Date</th><th>Event</th><th>City</th><th>Contact</th></tr></thead>
           <tbody>
-            <tr><td>Jun 2–5</td><td><a href="https://www.trade.gov/taiwan-trade-events" target="_blank" rel="noopener">Computex</a></td><td>Taipei</td><td>Jason Chang</td></tr>
-            <tr><td>Jun 22–25</td><td><a href="https://convention.bio.org/about-bio" target="_blank" rel="noopener">BIO International Convention</a></td><td>San Diego, CA</td><td>Grace Tao</td></tr>
-            <tr><td>Jul 16–19</td><td><a href="https://expo.bioasiataiwan.com/en/" target="_blank" rel="noopener">BIO Asia–Taiwan Exhibition</a></td><td>Taipei</td><td>Grace Tao</td></tr>
-            <tr><td>Jul 30–31</td><td><a href="https://www.ieatpe.org.tw/usproducts-taipei/" target="_blank" rel="noopener">Taipei–U.S. City Products &amp; Services Showcase</a></td><td>Taipei</td><td>Heidi Chang</td></tr>
-            <tr><td>Sep 2–4</td><td><a href="https://www.semicontaiwan.org/en" target="_blank" rel="noopener">SEMICON Taiwan</a></td><td>Taipei</td><td>Jason Chang</td></tr>
-            <tr><td>Sep 24–26</td><td><a href="https://events.taiwantrade.com/TWExpo26-usa" target="_blank" rel="noopener">Taiwan Expo USA</a></td><td>Dallas, TX</td><td>Heidi Chang</td></tr>
-            <tr><td>Oct 22–25</td><td><a href="https://www.taitronics.tw/en/index.html" target="_blank" rel="noopener">TAITRONICS &amp; AIoT Taiwan</a></td><td>Taipei</td><td>Jason Chang</td></tr>
-            <tr><td>Nov 3–5</td><td><a href="https://www.maturetaiwan.com/" target="_blank" rel="noopener">Taiwan Marine Tech &amp; Unmanned Robotics Expo</a></td><td>Tainan</td><td>Madison Yao</td></tr>
+            <tr><td>Jun 2–5</td><td><a href="https://www.trade.gov/taiwan-trade-events" target="_blank" rel="noopener">Computex</a></td><td>Taipei</td><td><a href="mailto:jason.chang@trade.gov">Jason Chang</a></td></tr>
+            <tr><td>Jun 22–25</td><td><a href="https://convention.bio.org/about-bio" target="_blank" rel="noopener">BIO International Convention</a></td><td>San Diego, CA</td><td><a href="mailto:grace.tao@trade.gov">Grace Tao</a></td></tr>
+            <tr><td>Jul 16–19</td><td><a href="https://expo.bioasiataiwan.com/en/" target="_blank" rel="noopener">BIO Asia–Taiwan Exhibition</a></td><td>Taipei</td><td><a href="mailto:grace.tao@trade.gov">Grace Tao</a></td></tr>
+            <tr><td>Jul 30–31</td><td><a href="https://www.ieatpe.org.tw/usproducts-taipei/" target="_blank" rel="noopener">Taipei–U.S. City Products &amp; Services Showcase</a></td><td>Taipei</td><td><a href="mailto:heidi.chang@trade.gov">Heidi Chang</a></td></tr>
+            <tr><td>Sep 2–4</td><td><a href="https://www.semicontaiwan.org/en" target="_blank" rel="noopener">SEMICON Taiwan</a></td><td>Taipei</td><td><a href="mailto:jason.chang@trade.gov">Jason Chang</a></td></tr>
+            <tr><td>Sep 24–26</td><td><a href="https://events.taiwantrade.com/TWExpo26-usa" target="_blank" rel="noopener">Taiwan Expo USA</a></td><td>Dallas, TX</td><td><a href="mailto:heidi.chang@trade.gov">Heidi Chang</a></td></tr>
+            <tr><td>Oct 22–25</td><td><a href="https://www.taitronics.tw/en/index.html" target="_blank" rel="noopener">TAITRONICS &amp; AIoT Taiwan</a></td><td>Taipei</td><td><a href="mailto:jason.chang@trade.gov">Jason Chang</a></td></tr>
+            <tr><td>Nov 3–5</td><td><a href="https://www.maturetaiwan.com/" target="_blank" rel="noopener">Taiwan Marine Tech &amp; Unmanned Robotics Expo</a></td><td>Tainan</td><td><a href="mailto:madison.yao@trade.gov">Madison Yao</a></td></tr>
           </tbody>
         </table>
       </div>
@@ -775,7 +885,7 @@ footer.site-footer .copyright { border-top: 1px solid rgba(255,255,255,0.15); pa
 
   <section class="tight">
     <div class="container">
-      <h2 class="section-title">2027 Event Calendar</h2>
+      <h2 class="section-title">2027 Events Calendar</h2>
       <div class="table-scroll">
         <table class="data-table event-table">
           <colgroup>
@@ -786,7 +896,7 @@ footer.site-footer .copyright { border-top: 1px solid rgba(255,255,255,0.15); pa
           </colgroup>
           <thead><tr><th>Date</th><th>Event</th><th>City</th><th>Contact</th></tr></thead>
           <tbody>
-            <tr><td>May 2–5</td><td><a href="https://www.selectusasummit.us/Home" target="_blank" rel="noopener">SelectUSA Investment Summit</a></td><td>National Harbor, MD</td><td>Heidi Chang</td></tr>
+            <tr><td>May 2–5</td><td><a href="https://www.selectusasummit.us/Home" target="_blank" rel="noopener">SelectUSA Investment Summit</a></td><td>National Harbor, MD</td><td><a href="mailto:heidi.chang@trade.gov">Heidi Chang</a></td></tr>
           </tbody>
         </table>
       </div>
@@ -906,7 +1016,7 @@ footer.site-footer .copyright { border-top: 1px solid rgba(255,255,255,0.15); pa
         <h4>Quick Links</h4>
         <p><a href="#members-directory">Member Directory</a><br>
         <a href="#invest-why">Why Invest in the U.S.</a><br>
-        <a href="#events">Event Calendar</a><br>
+        <a href="#events">Events Calendar</a><br>
         <a href="#resources">Resources</a></p>
       </div>
       <div>

@@ -1044,6 +1044,25 @@ footer.site-footer .copyright { border-top: 1px solid rgba(255,255,255,0.15); pa
 </footer>
 
 <script>
+function toggleMapFullscreen(btn) {
+  var container = btn.closest('.map-embed');
+  if (!container) { console.error('No .map-embed found'); return; }
+  var iframe = container.querySelector('iframe');
+  if (!iframe) { console.error('No iframe found'); return; }
+
+  if (!document.fullscreenElement) {
+    var req = iframe.requestFullscreen || iframe.webkitRequestFullscreen || iframe.msRequestFullscreen;
+    if (!req) { console.error('Fullscreen API not supported'); return; }
+    var result = req.call(iframe);
+    if (result && result.catch) {
+      result.catch(function (err) { console.error('Fullscreen request failed:', err); });
+    }
+  } else {
+    (document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen).call(document);
+  }
+}
+document.addEventListener('DOMContentLoaded', function () {
+  // ... rest of your existing code stays here, untouched
 document.addEventListener('DOMContentLoaded', function () {
 function toggleMapFullscreen(btn) {
   var container = btn.closest('.map-embed');

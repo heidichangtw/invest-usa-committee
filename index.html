@@ -1061,20 +1061,8 @@ function toggleMapFullscreen(btn) {
     (document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen).call(document);
   }
 }
+
 document.addEventListener('DOMContentLoaded', function () {
-  // ... rest of your existing code stays here, untouched
-document.addEventListener('DOMContentLoaded', function () {
-function toggleMapFullscreen(btn) {
-  var container = btn.closest('.map-embed');
-  var iframe = container.querySelector('iframe');
-  if (!document.fullscreenElement) {
-    (iframe.requestFullscreen || iframe.webkitRequestFullscreen || iframe.msRequestFullscreen)
-      .call(iframe);
-  } else {
-    (document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen)
-      .call(document);
-  }
-}
   // Mobile nav toggle
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('nav.main-nav');
@@ -1094,8 +1082,7 @@ function toggleMapFullscreen(btn) {
     });
   });
 
-  // Dropdown menus — forgiving hover-intent for desktop (keeps menu open briefly
-  // when the mouse leaves, so a diagonal move into the menu doesn't close it)
+  // Dropdown menus — forgiving hover-intent for desktop
   document.querySelectorAll('li.has-dropdown').forEach(function (li) {
     var closeTimer;
     li.addEventListener('mouseenter', function () {
@@ -1112,7 +1099,7 @@ function toggleMapFullscreen(btn) {
     });
   });
 
-  // Accordion (legacy — kept in case referenced elsewhere)
+  // Accordion (legacy)
   document.querySelectorAll('.accordion-header').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var item = btn.closest('.accordion-item');
@@ -1121,8 +1108,7 @@ function toggleMapFullscreen(btn) {
     });
   });
 
-  // Member Directory — category cards expand in place to reveal members
-  // (only one category open at a time, so the page stays clean)
+  // Member Directory — category cards expand in place
   function closeAllCategoryCards(except) {
     document.querySelectorAll('.category-card').forEach(function (otherCard) {
       if (otherCard === except) return;
@@ -1148,8 +1134,7 @@ function toggleMapFullscreen(btn) {
     });
   });
 
-  // Message forms — where a mailto address is set, open the user's email client
-  // pre-filled with the form contents; otherwise show a static-prototype note.
+  // Message forms
   document.querySelectorAll('form.message-form').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();

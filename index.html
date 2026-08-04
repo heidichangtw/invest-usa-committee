@@ -9,7 +9,28 @@
    Invest USA Committee — single-file site
    Brand: navy #1C3D6E / light blue #E8EEF7 / gold #C9962E
    ========================================================================== */
-
+.map-embed { position: relative; } /* already relative — just confirming */
+.map-fullscreen-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 5;
+  background: rgba(28,61,110,0.85);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  transition: background 0.15s ease;
+}
+.map-fullscreen-btn:hover { background: var(--navy-dark); }
+.map-fullscreen-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
 :root {
   --navy: #1C3D6E;
   --navy-dark: #12294d;
@@ -338,9 +359,13 @@ footer.site-footer .copyright { border-top: 1px solid rgba(255,255,255,0.15); pa
       <div class="card">
         <h3>Taiwan FDI in the U.S.</h3>
         <p>Taiwan is among the top Asian investors in the United States, with major commitments in semiconductors, advanced manufacturing, and technology.</p>
-        <div class="map-embed">
-          <iframe src="https://shelbyjayn.github.io/taiwan-fdi-map/" title="Taiwan FDI in the United States — Interactive Map" loading="lazy"></iframe>
-        </div>
+<div class="map-embed">
+  <button class="map-fullscreen-btn" type="button" onclick="toggleMapFullscreen(this)" aria-label="View map fullscreen">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+    Full Screen
+  </button>
+  <iframe src="https://shelbyjayn.github.io/taiwan-fdi-map/" title="Taiwan FDI in the United States — Interactive Map" loading="lazy"></iframe>
+</div>
         <p><a href="#invest-why">See Taiwan FDI trends →</a></p>
       </div>
     </div>
@@ -725,9 +750,13 @@ footer.site-footer .copyright { border-top: 1px solid rgba(255,255,255,0.15); pa
     <div class="container">
       <h3>Taiwan FDI Across the United States</h3>
       <p>Explore Taiwan investment by state, sector, and project — filter and click any marker for details.</p>
-      <div class="map-embed">
-        <iframe src="https://shelbyjayn.github.io/taiwan-fdi-map/" title="Taiwan FDI in the United States — Interactive Map" loading="lazy"></iframe>
-      </div>
+<div class="map-embed">
+  <button class="map-fullscreen-btn" type="button" onclick="toggleMapFullscreen(this)" aria-label="View map fullscreen">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+    Full Screen
+  </button>
+  <iframe src="https://shelbyjayn.github.io/taiwan-fdi-map/" title="Taiwan FDI in the United States — Interactive Map" loading="lazy"></iframe>
+</div>
       <p style="font-size:0.85rem; color:var(--text-muted);">Source: fDi Markets (2003–2026); Taiwan Trade &amp; Investment booklet, TECRO/MOEA. In 2010, over 83% of Taiwan's total outbound investment went to China. By 2025, China accounts for less than 1%. The United States is now Taiwan's #1 destination. <a href="https://shelbyjayn.github.io/taiwan-fdi-map/" target="_blank" rel="noopener">Open full map in a new tab →</a></p>
       <p><a href="#invest-why">← Back to Why Invest in the U.S.</a></p>
     </div>
@@ -1016,7 +1045,17 @@ footer.site-footer .copyright { border-top: 1px solid rgba(255,255,255,0.15); pa
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-
+function toggleMapFullscreen(btn) {
+  var container = btn.closest('.map-embed');
+  var iframe = container.querySelector('iframe');
+  if (!document.fullscreenElement) {
+    (iframe.requestFullscreen || iframe.webkitRequestFullscreen || iframe.msRequestFullscreen)
+      .call(iframe);
+  } else {
+    (document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen)
+      .call(document);
+  }
+}
   // Mobile nav toggle
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('nav.main-nav');

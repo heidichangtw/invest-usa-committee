@@ -221,6 +221,24 @@ form.message-form button { margin-top: 18px; background: var(--gold); color: var
 form.message-form button:hover { background: var(--gold-dark); color: var(--white); }
 
 
+/* Legal pages (Privacy Notice / Terms of Use) */
+.lang-toggle { display: flex; gap: 8px; margin-bottom: 26px; }
+.lang-btn { background: var(--white); border: 1.5px solid var(--navy); color: var(--navy); font-weight: 700; font-size: 0.85rem; padding: 8px 20px; border-radius: 20px; cursor: pointer; font-family: inherit; }
+.lang-btn.active { background: var(--navy); color: var(--white); }
+.legal-content { display: none; }
+.legal-content.active { display: block; }
+.legal-doc .updated { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 20px; }
+.legal-doc .intro-text { font-size: 1rem; margin-bottom: 10px; }
+.legal-doc h4.legal-heading { color: var(--navy); font-size: 1.05rem; margin: 0; padding: 20px 0 10px; border-top: 1px solid var(--border); }
+.legal-doc section.legal-article:first-of-type h4.legal-heading { border-top: none; padding-top: 0; }
+.legal-doc h5.legal-subheading { color: var(--navy); font-size: 0.95rem; margin: 14px 0 6px; }
+.legal-doc p, .legal-doc li { color: var(--text); }
+.legal-doc ul, .legal-doc ol { padding-left: 22px; margin: 8px 0 14px; }
+.legal-doc li { margin-bottom: 6px; }
+.legal-doc table.data-table { margin: 10px 0 20px; }
+.legal-doc .placeholder-note { background: #fbeecd; color: var(--gold-dark); border-radius: 6px; padding: 10px 14px; font-size: 0.85rem; margin-bottom: 24px; }
+.legal-doc .contact-block { background: var(--light-blue); border-radius: var(--radius); padding: 16px 18px; margin-top: 6px; }
+
 /* Footer */
 footer.site-footer { background: var(--navy-dark); color: #cdd9ec; padding: 36px 0 24px; margin-top: 40px; font-size: 0.88rem; }
 footer.site-footer .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 24px; margin-bottom: 20px; }
@@ -1017,6 +1035,488 @@ footer.site-footer .copyright { border-top: 1px solid rgba(255,255,255,0.15); pa
   </section>
 </div>
 
+<!-- ===================== PRIVACY NOTICE ===================== -->
+<div class="page" id="page-privacy" data-title="Privacy Notice">
+  <div class="page-banner"><div class="container"><h1>Privacy Notice</h1><p>隱私聲明</p></div></div>
+
+  <section>
+    <div class="container" style="max-width:820px;">
+      <div class="lang-toggle" data-scope="privacy">
+        <button type="button" class="lang-btn active" data-lang="zh">中文</button>
+        <button type="button" class="lang-btn" data-lang="en">English</button>
+      </div>
+
+	<div class="placeholder-note" style="display: none">此頁面內容取自委員會提供之隱私聲明範本，標示為【】或 [ ] 之處（例如日期、聯絡信箱、地址、系統名稱）為待填資訊，正式發布前請完成填寫。／ This page is based on the Committee's Privacy Notice template. Bracketed placeholders (e.g., date, contact email, address, hosting system) should be completed before publishing.</div>
+
+      <!-- ---- Chinese ---- -->
+      <div class="legal-content legal-doc active" data-lang="zh">
+        <div class="updated">最後更新日期：2026/09/10</div>
+        <p class="intro-text">投資美國委員會重視您的隱私，並致力於依照適用法規保護您的個人資料。本隱私聲明說明我們如何蒐集、使用、儲存及揭露您在使用本網站時所提供或產生之個人資料。</p>
+        <p class="intro-text">請您在使用本網站前詳細閱讀本隱私聲明。</p>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第一條　資料蒐集之範圍</h4>
+          <p>我們可能蒐集下列類型之資料：</p>
+          <h5 class="legal-subheading">（一）您主動提供之資料</h5>
+          <ul>
+            <li>姓名、公司名稱、職稱；</li>
+            <li>電子郵件地址、電話號碼、通訊地址；</li>
+            <li>您透過表單、問卷、訂閱或活動報名等方式所提供之其他資訊；</li>
+            <li>您向我們提出詢問或聯繫時所提供之內容。</li>
+          </ul>
+          <h5 class="legal-subheading">（二）自動蒐集之資料</h5>
+          <p>當您瀏覽本網站時，我們可能透過Cookie及類似技術自動蒐集下列資料：</p>
+          <ul>
+            <li>IP位址及裝置資訊（如作業系統、瀏覽器類型及版本）；</li>
+            <li>瀏覽頁面、瀏覽時間、點擊路徑及停留時間；</li>
+            <li>造訪來源（如搜尋引擎或外部連結）；</li>
+            <li>網站使用統計資料（以彙整、匿名化之方式蒐集）。</li>
+          </ul>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第二條　依個人資料保護法之特定目的及個人資料之類別</h4>
+          <p>依中華民國個人資料保護法（以下簡稱「個資法」）及主管機關依法公告之「個人資料保護法之特定目的及個人資料之類別」，本網站蒐集、處理及利用個人資料之特定目的及可能涉及之個人資料類別說明如下：</p>
+          <h5 class="legal-subheading">一、特定目的</h5>
+          <div class="table-scroll">
+            <table class="data-table">
+              <tr><th>編號</th><th>特定目的名稱</th><th>與本網站之關聯說明</th></tr>
+              <tr><td>040</td><td>行銷</td><td>寄送電子報、活動通知及投資相關資訊予訂閱者</td></tr>
+              <tr><td>069</td><td>合約、類合約或其他法律關係事務</td><td>與使用者訂定服務使用條款所生之法律關係，及後續資料保存義務</td></tr>
+              <tr><td>090</td><td>消費者、客戶管理與服務</td><td>管理使用者帳號、處理諮詢及提供網站服務</td></tr>
+              <tr><td>135</td><td>資（通）訊服務</td><td>提供網站瀏覽、訂閱服務及電子郵件通訊</td></tr>
+              <tr><td>136</td><td>資（通）訊與資料庫管理</td><td>維護使用者資料庫及網站後台系統管理</td></tr>
+              <tr><td>137</td><td>資通安全與管理</td><td>網站資安防護、記錄存取紀錄及防止詐欺或未授權存取</td></tr>
+              <tr><td>157</td><td>調查、統計與研究分析</td><td>蒐集匿名化之使用者行為統計，以分析及改善網站內容</td></tr>
+              <tr><td>170</td><td>資訊（含電腦處理）蒐集</td><td>透過Cookie等技術自動蒐集瀏覽資料及裝置資訊</td></tr>
+              <tr><td>176</td><td>其他諮詢與顧問服務</td><td>回應使用者就赴美投資相關事項所提出之詢問</td></tr>
+            </table>
+          </div>
+          <h5 class="legal-subheading">二、個人資料之類別</h5>
+          <div class="table-scroll">
+            <table class="data-table">
+              <tr><th>類別代號</th><th>類別名稱</th><th>本網站可能蒐集之具體內容</th></tr>
+              <tr><td>C001</td><td>辨識個人者</td><td>姓名、電子郵件地址、電話號碼、網路識別碼（如IP位址、Cookie識別碼）</td></tr>
+              <tr><td>C002</td><td>辨識財務者</td><td>公司統一編號或相關財務辨識資訊（限於使用者主動填報之情形）</td></tr>
+              <tr><td>C003</td><td>政府資料中之辨識者</td><td>中華民國統一證號或護照號碼（限於使用者主動填報之情形）</td></tr>
+              <tr><td>C011</td><td>個人描述</td><td>性別、年齡或其他基本個人特徵（如於問卷或表單中填報）</td></tr>
+              <tr><td>C031</td><td>住家及設施</td><td>通訊地址、所在城市或地區</td></tr>
+              <tr><td>C038</td><td>職業</td><td>任職公司名稱、職稱、所屬產業</td></tr>
+              <tr><td>C052</td><td>資格或技術</td><td>使用者於詢問中主動揭露之專業資格、執照或技術背景</td></tr>
+              <tr><td>C061</td><td>現行的受雇情形</td><td>現職狀態、服務機構等使用者主動提供之資訊</td></tr>
+              <tr><td>C081</td><td>收入、所得、資產與投資</td><td>使用者就赴美投資計畫所主動揭露之相關資產或投資規模資訊</td></tr>
+              <tr><td>C093</td><td>安全細節</td><td>帳號名稱、密碼或其他用於身分驗證之資訊（如本網站提供會員登入功能）</td></tr>
+              <tr><td>C101</td><td>其他各類資訊</td><td>使用者於聯絡表單或詢問欄位中自由填寫之其他內容</td></tr>
+              <tr><td>C102</td><td>約會或行程</td><td>活動報名時所填報之參加日期、場次偏好等資訊</td></tr>
+            </table>
+          </div>
+          <p>注意：上表所列「C002」、「C003」、「C011」、「C052」、「C061」、「C081」、「C093」等類別之資料，均限於使用者主動且自願提供之情形方可能蒐集，本網站不要求使用者提供上述類別之資料作為使用本網站之前提條件。</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第三條　資料蒐集之目的與使用</h4>
+          <p>我們蒐集個人資料之目的包括：</p>
+          <ul>
+            <li>提供、維護及改善本網站之功能與內容；</li>
+            <li>回應您之詢問、提供所申請之資訊或服務；</li>
+            <li>寄送您訂閱之電子報、活動通知或相關資訊；</li>
+            <li>分析使用者行為以優化使用者體驗；</li>
+            <li>遵守適用法律法規及回應主管機關之要求；</li>
+            <li>維護本網站之安全及防止詐欺或濫用行為。</li>
+          </ul>
+          <p>我們僅於上述蒐集目的之必要範圍內使用您的個人資料。</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第四條　Cookie 及追蹤技術</h4>
+          <p>4.1　Cookie之使用：本網站使用Cookie（儲存於您裝置上之小型文字檔案）以提升您的瀏覽體驗。我們使用之Cookie類型包括：</p>
+          <div class="table-scroll">
+            <table class="data-table">
+              <tr><th>Cookie類型</th><th>用途</th></tr>
+              <tr><td>必要性Cookie</td><td>維持網站基本功能</td></tr>
+              <tr><td>分析性Cookie</td><td>蒐集網站使用統計，以改善網站效能</td></tr>
+              <tr><td>功能性Cookie</td><td>記憶您的偏好設定（如語言選擇）</td></tr>
+              <tr><td>行銷性Cookie</td><td>提供相關廣告內容（如適用）</td></tr>
+            </table>
+          </div>
+          <p>4.2　您可透過瀏覽器設定管理或拒絕Cookie；惟停用部分Cookie可能影響本網站某些功能之正常使用。</p>
+          <p>4.3　本網站可能使用Google Analytics或其他第三方分析工具蒐集使用統計，該等工具之隱私政策請參閱各服務提供者之官方聲明。</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第五條　資料之揭露與共享</h4>
+          <p>我們不會將您的個人資料出售予第三方。在下列情形下，我們可能揭露您的個人資料：</p>
+          <ul>
+            <li>服務供應商：我們可能將資料委託予協助運營本網站之第三方技術服務商，該等服務商僅得於我們指示之範圍內使用您的資料；</li>
+            <li>法律要求：當依適用法律、法院命令或主管機關要求，我們有義務揭露相關資料時；</li>
+            <li>合法利益保護：為保護投資美國委員會或其他使用者之合法權利、財產或安全；</li>
+            <li>您之同意：在取得您的事先明確同意之情形下。</li>
+          </ul>
+          <p>跨國傳輸：本網站由[*]系統支援。您的個人資料可能傳輸至境外進行處理。我們將依適用法律採取適當保護措施，以確保您的資料於跨國傳輸時受到合適之保護。</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第六條　個人資料之保存期間</h4>
+          <p>我們將依達成蒐集目的所必要之期間保存您的個人資料，或依適用法律所規定之期間保存。當個人資料不再必要時，我們將予以安全刪除或匿名化處理。</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第七條　資料之安全</h4>
+          <p>我們採取合理之技術及組織措施，以保護您的個人資料免受未經授權之存取、使用、揭露、修改或毀損。惟請注意，任何網路傳輸均無法保證絕對安全，我們無法保證資料傳輸過程之完全安全性。</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第八條　您的權利</h4>
+          <p>依據個資法及其他適用法規，您就您的個人資料享有下列權利：</p>
+          <ul>
+            <li>查詢或閱覽：查閱我們所持有之您的個人資料；</li>
+            <li>製給複製本：請求提供您個人資料之複本；</li>
+            <li>補充或更正：要求更正不正確或不完整之個人資料；</li>
+            <li>停止蒐集、處理或利用：要求停止蒐集、處理或利用您的個人資料；</li>
+            <li>刪除：在特定情形下，要求刪除您的個人資料；</li>
+            <li>撤回同意：就以同意為依據之資料處理，隨時撤回您的同意（不影響撤回前之處理之合法性）。</li>
+          </ul>
+          <p>如欲行使上述權利，請依本聲明第十一條所載之聯絡方式與我們聯繫。我們將依適用法規規定之時限回應您的請求。</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第九條　未成年人之個人資料</h4>
+          <p>本網站並非針對未滿十八歲之未成年人所設計，我們不會刻意蒐集未成年人之個人資料。若您認為我們誤蒐集了未成年人之個人資料，請立即聯繫我們，我們將予以刪除。</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第十條　本聲明之修訂</h4>
+          <p>本隱私聲明得由我們隨時修訂，修訂後之版本將公告於本網站，並以公告日期為生效日。建議您定期查閱本聲明，以瞭解我們如何保護您的個人資料。</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第十一條　聯絡我們</h4>
+          <p>若您對本隱私聲明有任何疑問，或欲行使您的個人資料相關權利，請聯繫：</p>
+          <div class="contact-block">個人資料保護聯絡窗口<br>電子郵件：asoataiwan@gmail.com<br>地址：106028臺北市大安區龍圖里信義路三段178號5樓</div>
+        </section>
+      </div>
+
+      <!-- ---- English ---- -->
+      <div class="legal-content legal-doc" data-lang="en">
+        <div class="updated">Last Updated: 2026/09/10</div>
+        <p class="intro-text">Invest USA Committee respects your privacy and is committed to protecting your personal information in accordance with applicable law. This Privacy Notice explains how we collect, use, store, and disclose personal information that you provide or that is generated when you use this Website.</p>
+        <p class="intro-text">Please read this Privacy Notice carefully before using the Website.</p>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 1 — Information We Collect</h4>
+          <p>We may collect the following categories of information:</p>
+          <h5 class="legal-subheading">A. Information You Voluntarily Provide</h5>
+          <ul>
+            <li>Name, company name, and job title;</li>
+            <li>Email address, telephone number, and mailing address;</li>
+            <li>Other information you provide through forms, surveys, subscriptions, or event registrations;</li>
+            <li>Content of inquiries or other communications you send to us.</li>
+          </ul>
+          <h5 class="legal-subheading">B. Information Collected Automatically</h5>
+          <p>When you browse the Website, we may automatically collect the following information through cookies and similar technologies:</p>
+          <ul>
+            <li>IP address and device information (such as operating system, browser type, and version);</li>
+            <li>Pages visited, time of visit, click paths, and time spent on pages;</li>
+            <li>Referral source (such as search engines or external links);</li>
+            <li>Website usage statistics (collected in aggregated and anonymized form).</li>
+          </ul>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 2 — Specific Purposes and Categories of Personal Information under the Personal Information Protection Act</h4>
+          <p>In accordance with the Personal Data Protection Act of the Republic of China (Taiwan) ("PDPA") and the official schedules of specific purposes and categories of personal information published by the competent authority, the specific purposes for which we collect, process, and use personal information, and the categories of personal information that may be involved, are set out below.</p>
+          <h5 class="legal-subheading">I. Specific Purposes</h5>
+          <div class="table-scroll">
+            <table class="data-table">
+              <tr><th>Code</th><th>Specific Purpose</th><th>Relevance to This Website</th></tr>
+              <tr><td>040</td><td>Marketing</td><td>Sending newsletters, event notifications, and investment-related information to subscribers</td></tr>
+              <tr><td>069</td><td>Contract, Contract-like, or Other Legal Relationship Matters</td><td>Legal relationships arising from the Terms of Use and associated data retention obligations</td></tr>
+              <tr><td>090</td><td>Consumer and Customer Management and Services</td><td>Managing user accounts, handling inquiries, and providing website services</td></tr>
+              <tr><td>135</td><td>Information and Communication Services</td><td>Providing website browsing, subscription services, and email communications</td></tr>
+              <tr><td>136</td><td>Information and Communication and Database Management</td><td>Maintaining user databases and back-end website system administration</td></tr>
+              <tr><td>137</td><td>Information Security and Management</td><td>Website cybersecurity, access log recording, and prevention of fraud or unauthorized access</td></tr>
+              <tr><td>157</td><td>Survey, Statistics, and Research Analysis</td><td>Collecting anonymized user behavior statistics to analyze and improve website content</td></tr>
+              <tr><td>170</td><td>Information (Including Computer Processing) Collection</td><td>Automatic collection of browsing data and device information through cookies and similar technologies</td></tr>
+              <tr><td>176</td><td>Other Consultation and Advisory Services</td><td>Responding to user inquiries regarding investment in the United States</td></tr>
+            </table>
+          </div>
+          <h5 class="legal-subheading">II. Categories of Personal Information</h5>
+          <div class="table-scroll">
+            <table class="data-table">
+              <tr><th>Category Code</th><th>Category Name</th><th>Specific Content Potentially Collected by This Website</th></tr>
+              <tr><td>C001</td><td>Personal Identifiers</td><td>Name, email address, telephone number, online identifiers (e.g., IP address, cookie identifiers)</td></tr>
+              <tr><td>C002</td><td>Financial Identifiers</td><td>Company unified business number or other financial identifiers voluntarily provided by users (only where proactively submitted by the user)</td></tr>
+              <tr><td>C003</td><td>Government Data Identifiers</td><td>Republic of China national identification number or passport number voluntarily provided by users (only where proactively submitted by the user)</td></tr>
+              <tr><td>C011</td><td>Personal Descriptions</td><td>Gender, age, or other basic personal characteristics (where submitted through a survey or form)</td></tr>
+              <tr><td>C031</td><td>Housing and Facilities</td><td>Mailing address, city, or region</td></tr>
+              <tr><td>C038</td><td>Occupation</td><td>Name of employing company, job title, industry sector</td></tr>
+              <tr><td>C052</td><td>Qualifications or Skills</td><td>Professional qualifications, licenses, or technical background voluntarily disclosed by users in inquiries</td></tr>
+              <tr><td>C061</td><td>Current Employment Status</td><td>Current employment status and employer, as voluntarily provided by users</td></tr>
+              <tr><td>C081</td><td>Income, Earnings, Assets, and Investments</td><td>Information relating to asset scale or investment size voluntarily disclosed by users in connection with planned investment in the United States</td></tr>
+              <tr><td>C093</td><td>Security Details</td><td>Account names, passwords, or other information used for identity verification (where the Website provides a member login function)</td></tr>
+              <tr><td>C101</td><td>Other Miscellaneous Information</td><td>Other content freely entered by users in contact forms or inquiry fields</td></tr>
+              <tr><td>C102</td><td>Appointments or Schedules</td><td>Registration dates, session preferences, and similar information provided upon event registration</td></tr>
+            </table>
+          </div>
+          <p>Note: The categories C002, C003, C011, C052, C061, C081, and C093 listed above are collected only where users voluntarily and proactively provide such information. The Website does not require users to provide information falling within these categories as a prerequisite for accessing or using the Website.</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 3 — How We Use Your Information</h4>
+          <p>We collect personal information for the following purposes:</p>
+          <ul>
+            <li>To provide, maintain, and improve the functionality and content of the Website;</li>
+            <li>To respond to your inquiries and provide requested information or services;</li>
+            <li>To send newsletters, event notifications, or other information you have subscribed to;</li>
+            <li>To analyze user behavior in order to optimize the user experience;</li>
+            <li>To comply with applicable laws and regulations and respond to requests from competent authorities;</li>
+            <li>To maintain the security of the Website and prevent fraud or abuse.</li>
+          </ul>
+          <p>We use your personal information only to the extent necessary for the above stated purposes.</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 4 — Cookies and Tracking Technologies</h4>
+          <p>4.1 Use of Cookies: The Website uses cookies (small text files stored on your device) to enhance your browsing experience. The types of cookies we use include:</p>
+          <div class="table-scroll">
+            <table class="data-table">
+              <tr><th>Cookie Type</th><th>Purpose</th></tr>
+              <tr><td>Essential Cookies</td><td>To maintain basic website functionality</td></tr>
+              <tr><td>Analytical Cookies</td><td>To collect usage statistics to improve website performance</td></tr>
+              <tr><td>Functional Cookies</td><td>To remember your preferences (e.g., language selection)</td></tr>
+              <tr><td>Marketing Cookies</td><td>To deliver relevant advertising content (if applicable)</td></tr>
+            </table>
+          </div>
+          <p>4.2 You may manage or decline cookies through your browser settings; however, disabling certain cookies may affect the proper functioning of some features of the Website.</p>
+          <p>4.3 The Website may use Google Analytics or other third-party analytics tools to collect usage statistics. Please refer to the privacy policies of the respective service providers for further information.</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 5 — Disclosure and Sharing of Information</h4>
+          <p>We do not sell your personal information to third parties. We may disclose your personal information in the following circumstances:</p>
+          <ul>
+            <li>Service Providers: We may share your information with third-party technical service providers who assist us in operating the Website. Such providers may only use your information within the scope of our instructions;</li>
+            <li>Legal Requirements: Where we are required to disclose information under applicable law, court order, or requests from competent authorities;</li>
+            <li>Protection of Legitimate Interests: Where necessary to protect the legal rights, property, or safety of Invest USA Committee or other users;</li>
+            <li>With Your Consent: Where you have given your prior, explicit consent.</li>
+          </ul>
+          <p>Cross-Border Transfers: The Website is supported by systems in [*]. Your personal information may be transferred to and processed in other jurisdictions. We will take appropriate safeguards in accordance with applicable law to ensure that your information is adequately protected during any cross-border transfer.</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 6 — Retention of Personal Information</h4>
+          <p>We will retain your personal information for the period necessary to fulfill the purposes for which it was collected, or as required by applicable law. When personal information is no longer necessary, we will securely delete or anonymize it.</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 7 — Security</h4>
+          <p>We implement reasonable technical and organizational measures to protect your personal information against unauthorized access, use, disclosure, modification, or destruction. Please note, however, that no transmission over the internet can be guaranteed to be completely secure, and we cannot guarantee the absolute security of data during transmission.</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 8 — Your Rights</h4>
+          <p>Subject to applicable law, including PDPA, you have the following rights with respect to your personal information:</p>
+          <ul>
+            <li>Right of Access: To inquire about and review the personal information we hold about you;</li>
+            <li>Right to a Copy: To request a copy of your personal information;</li>
+            <li>Right to Rectification: To request correction of inaccurate or incomplete personal information;</li>
+            <li>Right to Restriction: To request that we cease collecting, processing, or using your personal information;</li>
+            <li>Right to Erasure: To request deletion of your personal information in certain circumstances;</li>
+            <li>Right to Withdraw Consent: To withdraw your consent at any time where processing is based on consent (without affecting the lawfulness of processing carried out prior to withdrawal).</li>
+          </ul>
+          <p>To exercise any of the foregoing rights, please contact us using the information set out in Article 11 below. We will respond to your request within the timeframe required by applicable law.</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 9 — Minors</h4>
+          <p>The Website is not designed for individuals under the age of eighteen (18), and we do not intentionally collect personal information from minors. If you believe that we have inadvertently collected personal information from a minor, please contact us immediately and we will delete such information.</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 10 — Amendments to This Notice</h4>
+          <p>This Privacy Notice may be amended by us at any time. The revised version will be posted on the Website and shall take effect as of the date of posting. We encourage you to review this Notice periodically to stay informed about how we protect your information.</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 11 — Contact Us</h4>
+          <p>If you have any questions about this Privacy Notice or wish to exercise your rights with respect to your personal information, please contact:</p>
+          <div class="contact-block">Personal Information Protection Contact<br>Email: asoataiwan@gmail.com<br>Address: 5F., No. 178, Sec. 3, Xinyi Rd., Da’an Dist., Taipei City 10656, Taiwan</div>
+        </section>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== TERMS OF USE ===================== -->
+<div class="page" id="page-terms" data-title="Terms of Use">
+  <div class="page-banner"><div class="container"><h1>Terms of Use</h1><p>使用條款</p></div></div>
+
+  <section>
+    <div class="container" style="max-width:820px;">
+      <div class="lang-toggle" data-scope="terms">
+        <button type="button" class="lang-btn active" data-lang="zh">中文</button>
+        <button type="button" class="lang-btn" data-lang="en">English</button>
+      </div>
+
+      <div class="placeholder-note" style="display: none">此頁面內容取自委員會提供之使用條款範本，標示為【】或 [ ] 之處（例如日期、聯絡信箱、地址）為待填資訊，正式發布前請完成填寫。／ This page is based on the Committee's Terms of Use template. Bracketed placeholders (e.g., date, contact email, address) should be completed before publishing.</div>
+
+      <!-- ---- Chinese ---- -->
+      <div class="legal-content legal-doc active" data-lang="zh">
+        <div class="updated">最後更新日期：2026/09/10</div>
+        <p class="intro-text">歡迎使用本網站（以下簡稱「本網站」）。本網站由投資美國委員會設立，旨在提供臺灣企業有關赴美投資之參考資訊。</p>
+        <p class="intro-text">請您在使用本網站前，詳細閱讀以下使用條款（以下簡稱「本條款」）。一旦您存取或使用本網站，即表示您已閱讀、理解並同意受本條款之約束。若您不同意本條款，請勿使用本網站。</p>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第一條　適用範圍</h4>
+          <p>本條款適用於所有存取或使用本網站之使用者，包括瀏覽者、訂閱者及任何透過本網站取得資訊之人士。</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第二條　網站內容性質</h4>
+          <p>2.1　本網站所提供之一切內容，包括但不限於文章、報告、指南、圖表、影片及其他資料（以下統稱「內容」），均僅供一般資訊參考之用，不構成法律意見、稅務建議或任何形式之專業諮詢。</p>
+          <p>2.2　本網站內容不得視為律師與當事人關係之建立，亦不得替代具備適當資格之專業人士就個別情況所提供之意見。</p>
+          <p>2.3　投資美國委員會對於內容之即時性、完整性、正確性或適用於特定情況不作任何明示或默示之保證。</p>
+          <p>2.4　赴美投資相關法規隨時可能變動，使用者應就個別投資計畫尋求具備相關資格之美國法律及稅務顧問之專業建議。</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第三條　智慧財產權</h4>
+          <p>3.1　本網站之設計、版面、商標、標誌及全部內容，均受著作權法及其他智慧財產權相關法律之保護，其權利歸屬於投資美國委員會或其授權人。</p>
+          <p>3.2　使用者得基於個人非商業性之參考目的，列印或下載本網站合理部分之內容，但不得：</p>
+          <ul>
+            <li>修改、翻譯、改作或衍生利用本網站任何內容；</li>
+            <li>將本網站內容用於任何商業目的，或公開重製、散布、播送；</li>
+            <li>移除或遮蔽本網站內容上任何著作權聲明或其他權利標示。</li>
+          </ul>
+          <p>3.3　本網站所顯示之任何商標或服務標章，均為其各自所有人之財產。</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第四條　使用者行為規範</h4>
+          <p>使用者同意不得從事下列行為：</p>
+          <ul>
+            <li>以任何方式干擾或破壞本網站之正常運作；</li>
+            <li>以自動化程式、爬蟲或類似工具大量擷取本網站內容；</li>
+            <li>透過本網站散布任何非法、有害、誹謗、侵權或其他不適當之內容；</li>
+            <li>冒充任何他人或機構；</li>
+            <li>嘗試未經授權存取本網站之任何系統或資料。</li>
+          </ul>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第五條　第三方連結</h4>
+          <p>本網站可能包含連結至第三方網站之超連結，該等連結僅為使用者之便利而提供。投資美國委員會對於第三方網站之內容、隱私政策或運作方式不負任何責任，亦不對其正確性或合法性為任何背書。使用者點選第三方連結後，應自行承擔相關風險。</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第六條　免責聲明與責任限制</h4>
+          <p>6.1　本網站及其內容係以「現狀」及「現有」方式提供，不附任何明示或默示之保證，包括但不限於適銷性、特定目的適用性或不侵權之保證。</p>
+          <p>6.2　在適用法律允許之最大範圍內，投資美國委員會及其員工、董事、代理人或授權人，對於因使用或無法使用本網站或其內容所致之任何直接、間接、附帶、特殊、懲罰性或衍生性損害，不承擔任何責任，即使已被告知此等損害之可能性亦然。</p>
+          <p>6.3　前項責任限制不影響依強制適用法律規定使用者所享有之任何權利。</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第七條　網站修改與停止服務</h4>
+          <p>投資美國委員會保留隨時修改、暫停或終止本網站或其任何功能之權利，無須事先通知，且不對使用者或任何第三方就此等修改或終止承擔任何責任。</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第八條　條款之修訂</h4>
+          <p>本條款得由投資美國委員會隨時修訂，修訂後之條款將公告於本網站，並以公告日期為生效日。使用者於條款修訂後繼續使用本網站，即視為同意修訂後之條款。建議使用者定期查閱本條款。</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第九條　準據法與管轄</h4>
+          <p>本條款之解釋與適用，以中華民國法律為準據法。因本條款或本網站所生之任何爭議，雙方同意以台灣台北地方法院為第一審管轄法院。</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">第十條　聯絡資訊</h4>
+          <p>若您對本條款有任何疑問，請聯繫：</p>
+          <div class="contact-block">電子郵件：asoataiwan@gmail.com<br>地址：106028臺北市大安區龍圖里信義路三段178號5樓</div>
+        </section>
+      </div>
+
+      <!-- ---- English ---- -->
+      <div class="legal-content legal-doc" data-lang="en">
+        <div class="updated">Last Updated:2026/09/10</div>
+        <p class="intro-text">Welcome to this website (the "Website"). The Website is operated by Invest USA Committee to provide reference information for Taiwanese companies interested in investing in the United States.</p>
+        <p class="intro-text">Please read these Terms of Use ("Terms") carefully before using the Website. By accessing or using the Website, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree to these Terms, please do not use the Website.</p>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 1 — Scope of Application</h4>
+          <p>These Terms apply to all users who access or use the Website, including visitors, subscribers, and any person who obtains information through the Website.</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 2 — Nature of Website Content</h4>
+          <p>2.1 All content provided on the Website, including but not limited to articles, reports, guides, charts, videos, and other materials (collectively, "Content"), is provided for general informational purposes only and does not constitute legal advice, tax advice, or any form of professional consultation.</p>
+          <p>2.2 No Content on the Website shall be construed as establishing an attorney-client relationship, nor shall it substitute for advice provided by a qualified professional with respect to any individual circumstances.</p>
+          <p>2.3 Invest USA Committee makes no express or implied representations or warranties as to the timeliness, completeness, accuracy, or applicability of any Content to any particular situation.</p>
+          <p>2.4 Laws and regulations relating to investment in the United States are subject to change. Users should seek advice from qualified U.S. legal and tax counsel with respect to any individual investment plan.</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 3 — Intellectual Property</h4>
+          <p>3.1 The design, layout, trademarks, logos, and all Content on the Website are protected by copyright law and other applicable intellectual property laws, and are owned by Invest USA Committee or its licensors.</p>
+          <p>3.2 Users may print or download a reasonable portion of the Content for personal, non-commercial reference purposes only. Users may not:</p>
+          <ul>
+            <li>Modify, translate, adapt, or create derivative works from any Content on the Website;</li>
+            <li>Use any Content for commercial purposes or publicly reproduce, distribute, or broadcast it;</li>
+            <li>Remove or obscure any copyright notice or other proprietary marking on any Content.</li>
+          </ul>
+          <p>3.3 Any trademarks or service marks displayed on the Website are the property of their respective owners.</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 4 — User Conduct</h4>
+          <p>Users agree not to engage in any of the following:</p>
+          <ul>
+            <li>Interfering with or disrupting the normal operation of the Website in any manner;</li>
+            <li>Using automated programs, web crawlers, or similar tools to mass-extract Content from the Website;</li>
+            <li>Distributing through the Website any unlawful, harmful, defamatory, infringing, or otherwise inappropriate content;</li>
+            <li>Impersonating any person or entity;</li>
+            <li>Attempting to gain unauthorized access to any system or data associated with the Website.</li>
+          </ul>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 5 — Third-Party Links</h4>
+          <p>The Website may contain hyperlinks to third-party websites, which are provided solely for the convenience of users. Invest USA Committee assumes no responsibility for the content, privacy policies, or practices of any third-party websites, and makes no endorsement of their accuracy or legality. Users access third-party links at their own risk.</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 6 — Disclaimer of Warranties and Limitation of Liability</h4>
+          <p>6.1 The Website and its Content are provided on an "as is" and "as available" basis, without any express or implied warranties, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+          <p>6.2 To the maximum extent permitted by applicable law, Invest USA Committee and its employees, directors, agents, and licensors shall not be liable for any direct, indirect, incidental, special, punitive, or consequential damages arising out of or in connection with the use of or inability to use the Website or its Content, even if advised of the possibility of such damages.</p>
+          <p>6.3 The foregoing limitation of liability shall not affect any rights that users may have under mandatory applicable law.</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 7 — Modification and Discontinuation of the Website</h4>
+          <p>Invest USA Committee reserves the right to modify, suspend, or discontinue the Website or any feature thereof at any time without prior notice, and shall not be liable to users or any third party for any such modification or discontinuation.</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 8 — Amendments to Terms</h4>
+          <p>These Terms may be amended by Invest USA Committee at any time. Amended Terms will be posted on the Website and shall take effect as of the date of posting. Continued use of the Website following any amendment constitutes acceptance of the revised Terms. Users are encouraged to review these Terms periodically.</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 9 — Governing Law and Jurisdiction</h4>
+          <p>These Terms shall be governed by and construed in accordance with the laws of Taiwan. Any dispute arising out of or in connection with these Terms or the Website shall be subject to the exclusive jurisdiction of the Taiwan Taipei District Court.</p>
+        </section>
+
+        <section class="legal-article">
+          <h4 class="legal-heading">Article 10 — Contact Information</h4>
+          <p>If you have any questions regarding these Terms, please contact:</p>
+          <div class="contact-block">Email: asoataiwan@gmail.com<br>Address: 5F., No. 178, Sec. 3, Xinyi Rd., Da’an Dist., Taipei City 10656</div>
+        </section>
+      </div>
+    </div>
+  </section>
+</div>
+
 </main>
 
 <footer class="site-footer">
@@ -1038,8 +1538,13 @@ footer.site-footer .copyright { border-top: 1px solid rgba(255,255,255,0.15); pa
         <p><a href="mailto:asoataiwan@gmail.com">asoataiwan@gmail.com</a><br>
         <a href="#contact">Contact us</a></p>
       </div>
+      <div>
+        <h4>Legal</h4>
+        <p><a href="#privacy">Privacy Notice</a><br>
+        <a href="#terms">Terms of Use</a></p>
+      </div>
     </div>
-    <div class="copyright">© 2026 Invest USA Committee. All rights reserved.</div>
+    <div class="copyright">© 2026 Invest USA Committee. All rights reserved. &nbsp;·&nbsp; <a href="#privacy">Privacy Notice</a> &nbsp;·&nbsp; <a href="#terms">Terms of Use</a></div>
   </div>
 </footer>
 
@@ -1096,6 +1601,22 @@ document.addEventListener('DOMContentLoaded', function () {
     li.addEventListener('mouseleave', function () {
       if (window.matchMedia('(max-width: 720px)').matches) return;
       closeTimer = setTimeout(function () { li.classList.remove('open'); }, 300);
+    });
+  });
+
+  // Legal pages — language toggle (Privacy Notice / Terms of Use)
+  document.querySelectorAll('.lang-toggle').forEach(function (toggle) {
+    var section = toggle.closest('.container');
+    toggle.querySelectorAll('.lang-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var lang = btn.getAttribute('data-lang');
+        toggle.querySelectorAll('.lang-btn').forEach(function (b) { b.classList.toggle('active', b === btn); });
+        if (section) {
+          section.querySelectorAll('.legal-content').forEach(function (c) {
+            c.classList.toggle('active', c.getAttribute('data-lang') === lang);
+          });
+        }
+      });
     });
   });
 
